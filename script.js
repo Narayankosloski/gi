@@ -15,9 +15,20 @@ document.getElementById("hair").src=
 
 }
 
+function backHair(){
+
+hair++;
+
+if(hair>3) hair=1;
+
+document.getElementById("hair").src=
+`img/hair/hair${hair}.png`;
+
+}
+
 function nextEyes(){
 
-eyes++;
+eyes--;
 
 if(eyes>3) eyes=1;
 
