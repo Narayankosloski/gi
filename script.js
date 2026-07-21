@@ -1,71 +1,71 @@
-let hair=1;
-let eyes=1;
-let shirt=1;
-let pants=1;
-let shoes=1;
+// Estado do personagem
+const character = {
+    hair: 1,
+    eyes: 1,
+    shirt: 1,
+    pants: 1,
+    shoes: 1
+};
 
-function nextHair(){
+// Quantidade de opções
+const maxOptions = {
+    hair: 3,
+    eyes: 3,
+    shirt: 3,
+    pants: 3,
+    shoes: 3
+};
 
-hair++;
+// Categoria aberta
+let currentCategory = "hair";
 
-if(hair>3) hair=1;
+// Abre uma categoria
+function openCategory(category){
 
-document.getElementById("hair").src=
-`img/hair/hair${hair}.png`;
+    currentCategory = category;
 
-}
+    const options = document.getElementById("options");
 
-function backHair(){
+    options.innerHTML = "";
 
-hair++;
+    let folder = category;
+    let file = category;
 
-if(hair>3) hair=1;
+    if(category === "shirt"){
+        folder = "clothes";
+        file = "shirt";
+    }
 
-document.getElementById("hair").src=
-`img/hair/hair${hair}.png`;
+    for(let i = 1; i <= maxOptions[category]; i++){
 
-}
-
-function nextEyes(){
-
-eyes--;
-
-if(eyes>3) eyes=1;
-
-document.getElementById("eyes").src=
-`img/eyes/eyes${eyes}.png`;
-
-}
-
-function nextShirt(){
-
-shirt++;
-
-if(shirt>3) shirt=1;
-
-document.getElementById("shirt").src=
-`img/clothes/shirt${shirt}.png`;
-
-}
-
-function nextPants(){
-
-pants++;
-
-if(pants>3) pants=1;
-
-document.getElementById("pants").src=
-`img/pants/pants${pants}.png`;
+        options.innerHTML += `
+            <div class="option" onclick="selectOption(${i})">
+                <img src="img/${folder}/${file}${i}.png" alt="">
+            </div>
+        `;
+    }
 
 }
 
-function nextShoes(){
+// Seleciona uma peça
+function selectOption(option){
 
-shoes++;
+    character[currentCategory] = option;
 
-if(shoes>3) shoes=1;
+    let folder = currentCategory;
+    let file = currentCategory;
 
-document.getElementById("shoes").src=
-`img/shoes/shoes${shoes}.png`;
+    if(currentCategory === "shirt"){
+        folder = "clothes";
+        file = "shirt";
+    }
+
+    document.getElementById(currentCategory).src =
+    `img/${folder}/${file}${option}.png`;
 
 }
+
+// Abre cabelo ao iniciar
+window.onload = () => {
+    openCategory("hair");
+};  

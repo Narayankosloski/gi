@@ -3,12 +3,12 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Character Creator</title>
+    <title>Character Creator</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -16,46 +16,61 @@
 
 <div class="container">
 
-<h1>Character Creator</h1>
+    <h1>Character Creator</h1>
 
-<div class="editor">
+    <div class="editor">
 
-<div class="personagem">
+        <!-- PERSONAGEM -->
+        <div class="personagem">
 
-<img id="body" src="img/body/body1.png">
+            <img id="body" src="img/body/body1.png">
 
-<img id="pants" src="img/pants/pants1.png">
+            <img id="pants" src="img/pants/pants1.png">
 
-<img id="shoes" src="img/shoes/shoes1.png">
+            <img id="shoes" src="img/shoes/shoes1.png">
 
-<img id="shirt" src="img/clothes/shirt1.png">
+            <img id="shirt" src="img/clothes/shirt1.png">
 
-<img id="eyes" src="img/eyes/eyes1.png">
+            <img id="eyes" src="img/eyes/eyes1.png">
 
-<img id="hair" src="img/hair/hair1.png">
+            <img id="hair" src="img/hair/hair1.png">
 
-</div>
+        </div>
 
-<div class="menu">
+        <!-- MENU -->
+        <div class="menu">
 
-<button onclick="nextHair()">Próximo cabelo</button>
-<button onclick="backHair()">volta cabelo</button>
+            <!-- Categorias -->
+            <div class="categorias">
 
-<button onclick="nextEyes()">Próximos olhos</button>
+                <button onclick="openCategory('hair')">💇</button>
 
-<button onclick="nextShirt()">Próxima roupa</button>
+                <button onclick="openCategory('eyes')">👁</button>
 
-<button onclick="nextPants()">Próxima calça</button>
+                <button onclick="openCategory('shirt')">👕</button>
 
-<button onclick="nextShoes()">Próximo sapato</button>
+                <button onclick="openCategory('pants')">👖</button>
 
-</div>
+                <button onclick="openCategory('shoes')">👟</button>
 
-</div>
+            </div>
+
+            <!-- Opções geradas pelo JavaScript -->
+            <div id="options" class="options"></div>
+
+        </div>
+
+    </div>
 
 </div>
 
 <script src="script.js"></script>
+
+<script>
+
+    openCategory("hair");
+
+</script>
 
 </body>
 </html>

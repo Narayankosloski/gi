@@ -1,115 +1,175 @@
 *{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-
-background:#1d1d1d;
-
-font-family:Arial;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-height:100vh;
-
-color:white;
-
+    background:#1d1d1d;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
 }
 
 .container{
-
-width:900px;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-gap:40px;
-
+    width:1200px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
 }
 
 .editor{
-
-display:flex;
-
-gap:60px;
-
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
 }
 
+/* =========================
+   PERSONAGEM
+========================= */
+
 .personagem{
-
-width:320px;
-
-height:520px;
-
-position:relative;
-
-background:#2c2c2c;
-
-border-radius:20px;
-
-overflow:hidden;
-
+    width:320px;
+    height:520px;
+    position:relative;
+    background:#2c2c2c;
+    border-radius:20px;
+    overflow:hidden;
 }
 
 .personagem img{
-
-position:absolute;
-
-width:100%;
-
-height:100%;
-
-object-fit:contain;
-
-left:0;
-
-top:0;
-
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
 }
+
+/* =========================
+   MENU
+========================= */
 
 .menu{
+    width:420px;
+    background:#2c2c2c;
+    border-radius:20px;
+    padding:20px;
+}
 
-display:flex;
+/* =========================
+   CATEGORIAS
+========================= */
 
-flex-direction:column;
+.categorias{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+    margin-bottom:20px;
+}
 
-gap:15px;
+.categorias button{
+    height:60px;
+    font-size:26px;
+}
+
+/* =========================
+   OPÇÕES
+========================= */
+
+.options{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(90px,1fr));
+    gap:15px;
+
+    max-height:420px;
+    overflow-y:auto;
+
+    padding-right:5px;
+}
+
+/* Scroll */
+
+.options::-webkit-scrollbar{
+    width:8px;
+}
+
+.options::-webkit-scrollbar-thumb{
+    background:#4b74ff;
+    border-radius:10px;
+}
+
+.options::-webkit-scrollbar-track{
+    background:#2c2c2c;
+}
+
+/* Cada opção */
+
+.option{
+
+    aspect-ratio:1/1;
+
+    background:#3b3b3b;
+
+    border:2px solid transparent;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
 
 }
 
+.option:hover{
+
+    border-color:#4b74ff;
+
+    transform:scale(1.05);
+
+}
+
+.option.selected{
+
+    border-color:#4b74ff;
+
+    background:#4b74ff30;
+
+}
+
+.option img{
+
+    width:75%;
+
+    height:75%;
+
+    object-fit:contain;
+
+    pointer-events:none;
+
+}
+/* =========================
+   BOTÕES
+========================= */
+
 button{
-
-padding:14px;
-
-background:#4b74ff;
-
-color:white;
-
-border:none;
-
-border-radius:10px;
-
-cursor:pointer;
-
-font-size:16px;
-
-transition:.3s;
-
+    border:none;
+    background:#4b74ff;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
 }
 
 button:hover{
-
-background:#2950d9;
-
+    background:#2950d9;
 }
