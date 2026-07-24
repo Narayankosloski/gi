@@ -310,3 +310,201 @@ footer{
     color:#777;
     border-top:1px solid rgba(255,255,255,.08);
 }
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1200px){
+
+    .container{
+        width:100%;
+        padding:0 20px;
+    }
+
+    .about-grid{
+        gap:40px;
+    }
+
+    .menu{
+        width:350px;
+    }
+
+}
+
+@media (max-width: 992px){
+
+    nav{
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero{
+        height:auto;
+        min-height:100vh;
+        padding:140px 20px 80px;
+        text-align:center;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero h1{
+        font-size:clamp(4rem,15vw,7rem);
+    }
+
+    .hero p{
+        font-size:1rem;
+        letter-spacing:2px;
+    }
+
+    .hero .line{
+        margin:30px auto;
+    }
+
+    .about-grid{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .editor{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+
+    .personagem{
+        width:300px;
+        height:490px;
+    }
+
+    .menu{
+        width:100%;
+        max-width:500px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    nav{
+        position:relative;
+        mix-blend-mode:normal;
+    }
+
+    .menu{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .menu a{
+        font-size:.8rem;
+    }
+
+    .hero{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:clamp(3rem,15vw,5rem);
+        line-height:.9;
+    }
+
+    .hero p{
+        font-size:.9rem;
+    }
+
+    .paragrafo-grande{
+        font-size:18px;
+    }
+
+    .creator{
+        padding:70px 20px;
+    }
+
+    .personagem{
+        width:260px;
+        height:430px;
+    }
+
+    .categorias{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .categorias button{
+        height:55px;
+        font-size:22px;
+    }
+
+    .options{
+        grid-template-columns:repeat(3,1fr);
+        max-height:320px;
+    }
+
+    .contact h2{
+        font-size:clamp(3rem,14vw,5rem);
+    }
+
+    .contact-links a{
+        font-size:1rem;
+    }
+
+}
+
+@media (max-width:480px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .hero{
+        padding:40px 15px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero p{
+        font-size:.8rem;
+        letter-spacing:1px;
+    }
+
+    .personagem{
+        width:220px;
+        height:360px;
+    }
+
+    .menu{
+        padding:15px;
+        border-radius:15px;
+    }
+
+    .categorias{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .categorias button{
+        font-size:20px;
+        height:50px;
+    }
+
+    .options{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .option{
+        border-radius:10px;
+    }
+
+    footer{
+        padding:25px 15px;
+        font-size:.85rem;
+    }
+
+}
