@@ -16,13 +16,13 @@
 
 <nav>
 
-<div class="logo">
+<div class="logo" >
 GI
 </div>
 
 <div class="menu">
-<a href="#about">ABOUT</a>
-<a href="#services">SERVICES</a>
+<a href="#logo">TITLE</a>
+<a href="#creator">CREATION</a>
 <a href="#projects">WORK</a>
 <a href="#contact">CONTACT</a>
 </div>
@@ -31,7 +31,7 @@ GI
 
 <!-- HERO -->
 
-<header class="hero">
+<header class="hero" id="logo">
 
 <div class="video-bg">
 
@@ -43,7 +43,7 @@ GI
 
 <h1>
 GISELE<br>
-VITORIA
+MARIA
 </h1>
 
 <div class="line"></div>
@@ -57,7 +57,7 @@ ARTESANATO E PERSONALIZAÇÃO
 </header>
 <section class="creator" >
 
-<div class="container">
+<div class="container" id="creator">
 
 
     <h1>Character Creator</h1>
@@ -107,6 +107,28 @@ ARTESANATO E PERSONALIZAÇÃO
     </div>
 
 </div>
+<div class="request-box">
+
+    <h3>Deseja algum detalhe especial?</h3>
+
+    <textarea
+        id="request"
+        placeholder="Ex: cabelo mais cacheado, olhos verdes, colocar um laço vermelho, mudar a cor do vestido..."
+    ></textarea>
+
+</div>  
+
+<div class="actions">
+
+    <button id="download">
+        Baixar Personagem
+    </button>
+
+    <button id="reset">
+        Reiniciar
+    </button>
+
+</div>
 </section>
 <!-- CONTACT -->
 
@@ -133,8 +155,10 @@ SOMETHING
 </footer>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <script src="script.js"></script>
+
 
 <script>
 

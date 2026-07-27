@@ -68,4 +68,30 @@ function selectOption(option){
 // Abre cabelo ao iniciar
 window.onload = () => {
     openCategory("hair");
+
+
+
+
+        const btn = document.getElementById("download");
+
+    btn.addEventListener("click", () => {
+
+        html2canvas(document.querySelector(".personagem"),{
+            backgroundColor:null,
+            scale:4
+        }).then(canvas => {
+
+            const link = document.createElement("a");
+
+            link.download = "personagem.png";
+            link.href = canvas.toDataURL("image/png");
+
+            link.click();
+
+        });
+
+    });
+
 };  
+
+
